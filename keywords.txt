@@ -1,4 +1,5 @@
-Timer	KEYWORD1
+DMTimer	KEYWORD1
+dmtimer	KEYWORD1
 isTimeReached	KEYWORD2
 reset	KEYWORD2
 setLastTime	KEYWORD2

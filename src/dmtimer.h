@@ -1,15 +1,15 @@
-#ifndef TIMER_H
-#define TIMER_H
+#ifndef DMTIMER_H
+#define DMTIMER_H
 
 #include "Arduino.h"
 
-class Timer {
+class DMTimer {
 private: //private members
 
 public: //public members
-  //Timer constructor
-  Timer();
-  Timer(unsigned long interval);
+  //DMTimer constructor
+  DMTimer();
+  DMTimer(unsigned long interval);
 
   bool isTimeReached(unsigned long currentTime, unsigned long interval);
   bool isTimeReached(unsigned long currentTime);
@@ -25,4 +25,4 @@ private:
 
 };
 
-#endif //TIMER_H
+#endif //DMTIMER_H

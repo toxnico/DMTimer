@@ -1,4 +1,4 @@
-#include <timer.h>
+#include <dmtimer.h>
 
 /**
  * Demonstrates the use of multiple timers sharing the same time reference.
@@ -6,8 +6,8 @@
  * in case of long execution in one or the other.
  */
 
-Timer timer1(1000000); //Create a timer at 1s interval
-Timer timer2(300000);  //Create a timer at 300ms interval
+DMTimer timer1(1000000); //Create a timer at 1s interval
+DMTimer timer2(300000);  //Create a timer at 300ms interval
 
 
 void setup(){
@@ -16,7 +16,7 @@ void setup(){
 
 void loop(){
   unsigned long now = micros();
-  
+
   if(timer1.isTimeReached(now)){ //we pass the micros() value retrieved at loop() start
     Serial.println("Timer 1 Tick!"); //call what you need, it can be a long execution
   }
@@ -24,6 +24,5 @@ void loop(){
   if(timer2.isTimeReached(now)){ //we pass the same micros() value here
     Serial.println("Timer 2 Tick!"); //call what you need
   }
-  
-}
 
+}

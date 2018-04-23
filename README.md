@@ -1,5 +1,7 @@
-# Timer
-Another Arduino Timer
+# DMTimer
+Another Arduino Timer, based on micros().
+
+Allows to dynamically change the interval. Check the examples for more info.
 
 The simplest use could be:
 ```cpp
@@ -14,6 +16,5 @@ void loop(){
     Serial.println("Tick!"); //call what you need
   }
 }
-
 
 ```
