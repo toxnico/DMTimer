@@ -16,7 +16,7 @@ bool DMTimer::isTimeReached(unsigned long currentTime){
 }
 
 bool DMTimer::isTimeReached(unsigned long currentTime, unsigned long interval){
-  if(currentTime > _lastTime + interval)
+  if(currentTime - _lastTime > interval)
   {
     _lastTime = currentTime;
     return true;
