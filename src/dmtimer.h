@@ -7,6 +7,7 @@ class DMTimer {
 private: //private members
 
 public: //public members
+  bool enabled = true;
   //DMTimer constructor
   DMTimer();
   DMTimer(unsigned long interval);
@@ -18,6 +19,9 @@ public: //public members
   void reset() { setLastTime(micros()); }
   void setLastTime(unsigned long time) { this->_lastTime = time; }
   void setInterval(unsigned long interval) { this->_interval = interval; }
+
+  inline void enable() { enabled = true; }
+  inline void disable() { enabled = false; }
 
 private:
   unsigned long _lastTime = 0;
